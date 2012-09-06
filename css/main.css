@@ -519,9 +519,51 @@ html {
   margin: 0;
 }
 
+.mini {
+  display: none;
+}
+
 /* ==========================================================================
    Media Queries for Responsive Design.
    ========================================================================== */
+@media only screen and (max-width: 400px) {
+  /* Style adjustments for viewports that meet the condition */
+  .mini {
+    display: block;
+  }
+
+  .big {
+    display: none;
+  }
+
+  body {
+    padding: 5px 10px;
+  }
+
+  .photo-side {
+    float: none;
+    width: auto;
+  }
+  .photo-side img {
+    float: left;
+    margin-right: 5px;
+  }
+  .photo-side .copyright {
+    text-align: left;
+  }
+  .photo-side .btn {
+    display: none;
+  }
+
+  .article {
+    float: none;
+    margin-left: 0;
+  }
+
+  .updated {
+    display: none;
+  }
+}
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r

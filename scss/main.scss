@@ -220,11 +220,44 @@ html{
 .whois-author{
     margin: 0;
 }
+.mini{
+    display: none;
+}
 
 /* ==========================================================================
    Media Queries for Responsive Design.
    ========================================================================== */
 
+@media only screen and (max-width: 400px)  {
+    /* Style adjustments for viewports that meet the condition */
+    .mini{
+        display: block;
+    }
+    .big{
+        display: none;
+    }
+    body{
+        padding: 5px 10px;
+    }
+    .photo-side{
+        float: none; width: auto;
+        img{
+            float: left; margin-right: 5px;
+        }
+        .copyright{
+            text-align: left;
+        }
+        .btn{
+            display: none;
+        }
+    }
+    .article{
+        float: none; margin-left: 0;
+    }
+    .updated{
+        display: none;
+    }
+}
 
 /* ==========================================================================
    Print styles.

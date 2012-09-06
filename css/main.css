@@ -339,10 +339,15 @@ textarea {
 /* ==========================================================================
    Custom styles by Bernard Kobos 'berni'
    ========================================================================== */
+a:hover {
+  color: #cc6600;
+}
+
 body {
   font-family: Arial, "MS Trebuchet", sans-serif;
   font-size: 14px;
   color: #202020;
+  padding: 18px 30px;
 }
 
 .breadcrumbs ul {
@@ -370,15 +375,135 @@ body {
   font-family: Georgia, "Times New Roman", Times,serif;
 }
 
+.author-link {
+  color: #cc6600;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .article {
   margin-left: 192px;
   font-size: 14px;
+}
+
+.btn {
+  border: 0;
+  color: #202020;
+  text-decoration: none;
+}
+.btn:visited {
+  color: #202020;
+}
+.btn.enlarge {
+  text-transform: uppercase;
+  background: none;
+  color: #cc6600;
+  padding: 0;
+}
+.btn.comment:before {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  content: '';
+  margin-right: 5px;
+  background-image: url("../images/sprites.gif");
+  background-position: 0 -479px;
+  position: relative;
+  top: 1px;
+}
+.btn.email:before {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  content: '';
+  margin-right: 5px;
+  background-image: url("../images/sprites.gif");
+  background-position: 0 -255px;
+  position: relative;
+  top: 1px;
+}
+.btn.print:before {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  content: '';
+  margin-right: 5px;
+  background-image: url("../images/sprites.gif");
+  background-position: 0 -301px;
+  position: relative;
+  top: 1px;
+}
+.btn.share:before {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  content: '';
+  margin-right: 5px;
+  background-image: url("../images/sprites.gif");
+  background-position: 0 -346px;
+  position: relative;
+  top: 1px;
+}
+.btn.larger:before {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  content: '';
+  margin-right: 5px;
+  background-image: url("../images/sprites.gif");
+  background-position: 0 -391px;
+  position: relative;
+  top: 1px;
+  top: 3px;
+}
+.btn.smaller:before {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  content: '';
+  margin-right: 5px;
+  background-image: url("../images/sprites.gif");
+  background-position: 0 -4371px;
+  position: relative;
+  top: 1px;
+}
+
+.article-menu {
+  margin: 0;
+  padding: 8px 0;
+  border-top: 1px dotted #202020;
+}
+.article-menu ul {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  list-style: none;
+}
+.article-menu li {
+  float: left;
+}
+.article-menu li:not(:first-child) {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid #202020;
 }
 
 .photo-side {
   font-size: 12px;
   float: left;
   width: 170px;
+}
+
+.article-timestamps {
+  margin: 15px 0 15px 0;
+  color: #666666;
+}
+.article-timestamps p {
+  margin: 0;
+}
+
+.whois-author {
+  margin: 0;
 }
 
 /* ==========================================================================

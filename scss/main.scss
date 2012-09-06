@@ -112,11 +112,14 @@ textarea {
 /* ==========================================================================
    Custom styles by Bernard Kobos 'berni'
    ========================================================================== */
-
+a:hover{
+    color: $color_orange;
+}
 body{
     font-family: Arial, "MS Trebuchet", sans-serif; 
     font-size: $text_size_default;
     color: $color_black;
+    padding: 18px 30px;
 }
 .breadcrumbs{
     ul{
@@ -141,11 +144,73 @@ body{
     font-size: $text_size_headline;
     font-family: Georgia, "Times New Roman", Times,serif;
 }
+.author-link{
+    color: $color_orange; text-decoration: none;
+    font-weight: bold;
+}
 .article{
     margin-left: 192px; font-size: $text_size_default;
 }
+@mixin icon($top){
+    display: inline-block; width: 13px; height: 13px;
+    content: ''; margin-right: 5px;
+    background-image: url("../images/sprites.gif");
+    background-position: 0 -1 * $top;
+    position: relative; top: 1px;
+}
+.btn{
+    border: 0; color: $color_black; text-decoration: none;
+    &:visited{
+        color: $color_black;
+    }
+    &.enlarge{
+        text-transform: uppercase; background: none;
+        color: $color_orange; padding: 0;
+    }
+    &.comment:before{
+        @include icon(479px);
+    }
+    &.email:before{
+        @include icon(255px);
+    }
+    &.print:before{
+        @include icon(301px);
+    }
+    &.share:before{
+        @include icon(346px);
+    }
+    &.larger:before{
+        @include icon(391px); top: 3px;
+    }
+    &.smaller:before{
+        @include icon(4371px);
+    }
+}
+.article-menu{
+    margin: 0; padding: 8px 0;
+    border-top: 1px dotted $color_black;
+    ul{
+        padding: 0; margin: 0; overflow: hidden; list-style: none;
+    }
+    li{
+        float: left;
+        &:not(:first-child){
+            margin-left: 10px; padding-left: 10px;
+            border-left: 1px solid $color_black;
+        }
+    }
+}
 .photo-side{
     font-size: $text_size_cutline; float: left; width: 170px;
+}
+.article-timestamps{
+    margin: 15px 0 15px 0; color: $color_grey;
+    p{
+        margin: 0;
+    }
+}
+.whois-author{
+    margin: 0;
 }
 
 /* ==========================================================================

@@ -120,6 +120,11 @@ body{
     font-size: $text_size_default;
     color: $color_black;
     padding: 18px 30px;
+    @include background(linear-gradient(top, #CCCCCC, #FFFFFF));
+}
+html{
+    // so background always takes whole window
+    min-height: 100%;
 }
 .breadcrumbs{
     ul{
@@ -130,7 +135,7 @@ body{
         &:not(:first-child){
             margin-left: 8px;
             a:before{
-                content: '>'; display: block;
+                content: '>'; display: inline-block;
                 color: black;
                 margin-right: 10px;
             }
@@ -150,6 +155,9 @@ body{
 }
 .article{
     margin-left: 192px; font-size: $text_size_default;
+    section.larger{
+        font-size: 16px;
+    }
 }
 @mixin icon($top){
     display: inline-block; width: 13px; height: 13px;
@@ -183,7 +191,7 @@ body{
         @include icon(391px); top: 3px;
     }
     &.smaller:before{
-        @include icon(4371px);
+        @include icon(434px);
     }
 }
 .article-menu{

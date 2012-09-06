@@ -348,6 +348,16 @@ body {
   font-size: 14px;
   color: #202020;
   padding: 18px 30px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #cccccc), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #cccccc, #ffffff);
+  background: -moz-linear-gradient(top, #cccccc, #ffffff);
+  background: -o-linear-gradient(top, #cccccc, #ffffff);
+  background: -ms-linear-gradient(top, #cccccc, #ffffff);
+  background: linear-gradient(top, #cccccc, #ffffff);
+}
+
+html {
+  min-height: 100%;
 }
 
 .breadcrumbs ul {
@@ -361,7 +371,7 @@ body {
 }
 .breadcrumbs li:not(:first-child) a:before {
   content: '>';
-  display: block;
+  display: inline-block;
   color: black;
   margin-right: 10px;
 }
@@ -384,6 +394,9 @@ body {
 .article {
   margin-left: 192px;
   font-size: 14px;
+}
+.article section.larger {
+  font-size: 16px;
 }
 
 .btn {
@@ -463,7 +476,7 @@ body {
   content: '';
   margin-right: 5px;
   background-image: url("../images/sprites.gif");
-  background-position: 0 -4371px;
+  background-position: 0 -434px;
   position: relative;
   top: 1px;
 }
